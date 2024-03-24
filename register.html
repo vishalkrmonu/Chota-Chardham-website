@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <script src="app.js"></script>
+</head>
+
+
+<style>
+   body{
+    margin: 0px;
+    padding: 0px;
+    background: no-repeat;
+    background-size:cover;
+    background: url('CD/p2.jpg') no-repeat center center/cover;
+ } 
+ 
+    .container {
+        display: inline-block;
+        border: 2px solid black;
+
+        margin: 80px 280px;
+        padding: 21px 34px;
+        width: 31%;
+        border-radius: 35px;
+        text-align: center;
+        /* display: inline; */
+    }
+    .container h3{
+        text-align: center;
+    }
+    
+
+ form label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 4px;
+    text-align: center;
+    width: 59px;
+    color:black;
+ }
+ form input{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+</style>
+<body>
+
+<div class="container">
+    <form action="/register" method="POST">
+
+        <div>
+             <label for="name">Name</label>
+            <input type="text" name="myname" id="name">
+        </div>
+        <br>
+        <div>
+            <label for="number">number</label>
+            <input type="text" name="mynumber" id="number">
+        </div>
+       <br>
+        
+        <div>
+            <label for="gender">gender</label>
+              male <input type="radio" name="mygender">female <input type="radio" name="mygender">other<input
+                type="radio" name="mygender">
+        </div>
+        <br>
+        <div>
+            <label for="email">email</label>
+            <input type="text" name="myemail" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="password">password</label>
+            <input type="text" name="mypassword" id="password">
+        </div>
+        <br>
+        <div>
+            <label for="confirm-password">confirm-password</label>
+            <input type="text" name="myconfirmPassword" id="confirm-password">
+        </div>
+        <br>
+        <button class="btn">submit</button>
+        </div>
+    </form>
+    </div>
+    
