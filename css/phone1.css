@@ -1,9 +1,14 @@
 /* navbar section  */
 #navbar{
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+/* @media only screen and (max-width: 1002px){
+    #nav-list{
+        flex-direction: column;
+    }} */
 #navbar::before{
     align-items: center;
     justify-content: center;
