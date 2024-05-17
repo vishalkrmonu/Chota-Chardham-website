@@ -16,20 +16,19 @@
     padding: 0px;
     /* background: no-repeat; */
     /* background-size:cover; */
-    background: url('CD/p2.jpg') no-repeat center center/cover;
+    background: url('hill.webp') no-repeat center center/cover;
  } 
  
     .container {
     background: url('CD/p2.jpg') no-repeat center center/cover;
 
-        display: inline-block;
-        border: 2px solid black;
-        margin: 149px 242px;
-        padding: 21px 34px;
-        width: 45%;
-        border-radius: 35px;
-        text-align: center;
-        /* display: inline; */
+    display: inline-block;
+    border: 2px solid black;
+    margin: 82px 84px;
+    padding: 21px 34px;
+    width: 31%;
+    border-radius: 9px;
+    text-align: center;
     }
     .container h3{
         text-align: center;
@@ -46,11 +45,18 @@
  form input{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
+ .btn{
+    cursor: pointer;
+ }
+ .btn:hover{
+    background-color: red;
+ }
 </style>
 <body>
-
-<div class="container">
-    <form action="/register" method="POST">
+    
+    <div class="container">
+        <form action="/register" method="POST">
+        <h1>Registration Page </h1>
 
         <div>
              <label for="name">Name</label>
@@ -88,4 +94,6 @@
         </div>
     </form>
     </div>
-    
+        
+   </body>
+ </html>
