@@ -8,7 +8,8 @@
     <h1>Admin panel or details of all users</h1>
     <h2>Registered Users</h2>
     <table border="1">
-        <thead>
+        <!-- table header ko show krne ke liye -->
+        <thead>  <!-- contains the table headers (Name, Number, Gender, Email). -->
             <tr>
                 <th>Name</th>
                 <th>Number</th>
@@ -16,7 +17,8 @@
                 <th>Email</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody>   <!--this part is use for show the data , using server side -->
+
             <% registers.forEach(register => { %>
                 <tr>
                     <td><%= register.myname %></td>

@@ -1,13 +1,13 @@
-const express = require("express");  
-const app = express();     
+const express = require("express"); //with express we access all properties/method of all page 
+const app = express();      // all are module
 
-const path = require("path");        
-const mongoose = require("mongoose"); 
+const path = require("path");        //path ko handle krna   
+const mongoose = require("mongoose"); //mongoose pakage install /connect 
 
 const port = 2000;
 
 // Set up Mongoose connection
-mongoose.connect("mongodb://127.0.0.1:27017/detail") 
+mongoose.connect("mongodb://127.0.0.1:27017/detail") //mongodb me detail database use krna chahte hai
   .then(() => {
     console.log("Connection successful");
   })

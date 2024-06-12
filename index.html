@@ -22,10 +22,15 @@
                 <li><a href="call.html">Helpline</a></li>
 
         </ul>
-        <div class="rightNav v-class-resp">
+        <!-- <div class="rightNav v-class-resp">
             <input type="text" name="Search" id="search">
             <button class="btn btn-sm">Search</button>
+        </div> -->
+        <div class="rightNav v-class-resp">
+            <input type="text" name="Search" id="search">
+            <button class="btn btn-sm" id="searchButton">Search</button>
         </div>
+
         <div class="burger">
             <div class="line"></div>
             <div class="line"></div>
@@ -158,5 +163,14 @@
 </p>
 </footer>
 <script src="js/resp.js"></script>
+<script>
+    document.getElementById('searchButton').onclick = function() {
+        var query = document.getElementById('search').value;
+        if (query) {
+            var url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            window.location.href = url;
+        }
+    }
+</script>
 </body>
 </html>
