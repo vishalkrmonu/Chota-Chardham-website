@@ -11,6 +11,7 @@ padding: 0;
 }
 
 body{
+    
     background: url(evening.webp) no-repeat center center fixed;
     background-size: cover; 
 }
@@ -102,6 +103,7 @@ body{
             if (email === 'vishalkrmonu@gmail.com' && password === 'vishal@123') {
                 // If match, redirect to admin page
                 window.location.href = "/admin";
+                alert("Now open admin page");
             } else {
                 // If not match, display error message
                 alert("You are not admin");

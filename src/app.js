@@ -25,6 +25,14 @@ app.use(express.urlencoded({ extended: true })); //iska matlb jo bhi data hai us
 const static_path = path.join(__dirname, "../"); //ye batata hai html file kaha hai ya html ko access kr rha hai
 app.use(express.static(static_path));
 
+const indexSchema=new mongoose.Schema({
+  name:String,
+phone:Number,
+email:String,
+address:String,
+text:String,
+})
+const Index=mongoose.model("Index",indexSchema);
 
 // data kis format me save hoga 
 // Define the mongodb schema for register
@@ -70,11 +78,36 @@ app.get("/register", (req, res) => { //page ko access krne ke liye
   res.sendFile(registerPath);
 });
 
+app.post("/", async (req, res) => {
+  try {
+    const {
+      name,
+      phone,
+      email,
+      address,
+      text
+    } = req.body;
+    const index = new Index({
+      name,
+      phone,
+      email,
+      address,
+      text,
+    });
+    await index.save();
+    res.send("feedback successful");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error during feedback");
+  }
+});
+
 app.post("/register", async (req, res) => { //after post req data save in mongodb
   try {
     const { myname, mynumber, mygender, myemail, mypassword, myconfirmPassword } = req.body;
     if (mypassword !== myconfirmPassword) {
       return res.status(400).send("Password and confirm password do not match");
+
     }
     const user = new Register({ //diff user ke liye diff data save krta hai
       myname,
@@ -135,6 +168,7 @@ app.post("/booking", async (req, res) => {
       paymentMethod,
     });
     await booking.save();
+    
     res.send("Booking successful");
   } catch (error) {
     console.error(error);
